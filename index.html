@@ -19,55 +19,50 @@
         height: 100% !important;
       }
 
-      .telegram-toggle {
-        position: fixed;
+      #tele {
+        position: absolute;
         top: 10px;
         right: 10px;
         background-color: #0088cc;
         color: #fff;
         padding: 10px 15px;
+        border: none;
         border-radius: 50px;
-        text-decoration: none;
         font-weight: bold;
         display: flex;
         align-items: center;
+        cursor: pointer;
         z-index: 1001;
       }
 
-      .telegram-toggle img {
+      #tele img {
         width: 20px;
         height: 20px;
         margin-right: 5px;
-      }
-
-      #message {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        z-index: 1001;
       }
     </style>
   </head>
   <body>
     <div id="player"></div>
+    <button id="tele" onclick="welcome()">
+      <img src="telegram.svg" alt="Telegram Icon" />
+      JOIN TELEGRAM
+    </button>
+
     <script src="//ssl.p.jwpcdn.com/player/v/8.25.1/jwplayer.js"></script>
     <script>
       jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+
       window.onload = function() {
         var playerInstance = jwplayer("player");
         var source = {
           "file": "https://d1yws6emo43ny.cloudfront.net/CH5/masterCH5.mpd",
           "default": true,
           onXhrOpen: function(xhr, url) {
-            xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3bXZlciI6Miwid21pZGZtdCI6ImFzY2lpIiwid21pZHR5cCI6MSwid21rZXl2ZXIiOjEsIndtaWRsZW4iOjUxMiwid21pZCI6Ik1Ea3dZamxsTVRFdE1UQXpaUzAwTVdNM0xXSTJOamt0TWpCbVpUSXpOR0pqTmpGayIsIndtb3BpZCI6MzIsImV4cCI6MTczMjg3NDMxMCwiaWF0IjoxNzMyMjcwMzEwfQ.IPhIGzqSAZB7Z2SGfh5p5VoxMO0fSVKtgEIaUl0By3s');
+            xhr.setRequestHeader(
+              'Authorization',
+              'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3bXZlciI6Miwid21pZGZtdCI6ImFzY2lpIiwid21pZHR5cCI6MSwid21rZXl2ZXIiOjEsIndtaWRsZW4iOjUxMiwid21pZCI6Ik1qY3hZV0ZtWXpZdFptTXhNaTAwWVRrMkxXSTFNbU10TnpZMk0yVTJaVFZoWldJNSIsIndtb3BpZCI6MzIsImV4cCI6MTczMjU5MjcyOCwiaWF0IjoxNzMxOTg4NzI4fQ.4k_BFJaMkyQT_rCnWPBszMzT-gWhCLLzcYv9fuG1fCc'
+            );
           }
         };
         source.type = "dash";
@@ -90,34 +85,10 @@
           }
         });
       };
-    </script>
-   
-var a = confirm("JOIN OUR TELEGRAM CHANNEL FOR BETTER LIVE LINKS");
 
-if(a==true){
-  window.location.href = "https://t.me/cricmatchstream";
-}
-
-      
-      
-
-
-      function welcome(){
- window.open("https://t.me/cricmatchstream")
+      function welcome() {
+        window.open("https://t.me/cricmatchstream");
       }
-    </script>
-
-<!-- <div id="tele">
-  <img src="telegram.svg" />
-  <ul>
-      <li><a class="item" href="https://t.me/cricmatchstream">JOIN TELEGRAM</a></li>
-   </ul>
-  </div> -->
-  <div id="ok">
-  <button  id="tele"onclick="welcome()">
-    <img src="telegram.svg" />
-    CLICK HERE TO JOIN TELEGRAM 
-    </button>
     </script>
   </body>
 </html>
