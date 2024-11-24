@@ -67,7 +67,7 @@
           "file": "https://d1yws6emo43ny.cloudfront.net/CH5/masterCH5.mpd",
           "default": true,
           onXhrOpen: function(xhr, url) {
-            xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3bXZlciI6Miwid21pZGZtdCI6ImFzY2lpIiwid21pZHR5cCI6MSwid21rZXl2ZXIiOjEsIndtaWRsZW4iOjUxMiwid21pZCI6Ik1qY3hZV0ZtWXpZdFptTXhNaTAwWVRrMkxXSTFNbU10TnpZMk0yVTJaVFZoWldJNSIsIndtb3BpZCI6MzIsImV4cCI6MTczMjU5MjcyOCwiaWF0IjoxNzMxOTg4NzI4fQ.4k_BFJaMkyQT_rCnWPBszMzT-gWhCLLzcYv9fuG1fCc');
+            xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3bXZlciI6Miwid21pZGZtdCI6ImFzY2lpIiwid21pZHR5cCI6MSwid21rZXl2ZXIiOjEsIndtaWRsZW4iOjUxMiwid21pZCI6Ik1Ea3dZamxsTVRFdE1UQXpaUzAwTVdNM0xXSTJOamt0TWpCbVpUSXpOR0pqTmpGayIsIndtb3BpZCI6MzIsImV4cCI6MTczMjg3NDMxMCwiaWF0IjoxNzMyMjcwMzEwfQ.IPhIGzqSAZB7Z2SGfh5p5VoxMO0fSVKtgEIaUl0By3s');
           }
         };
         source.type = "dash";
@@ -91,12 +91,33 @@
         });
       };
     </script>
-    <script>
-      if (window.top !== window.self) {
-        window.addEventListener('DOMContentLoaded', function() {
-          document.body.innerHTML = ' < div id = "message" >  < /div>';
-        });
+   
+var a = confirm("JOIN OUR TELEGRAM CHANNEL FOR BETTER LIVE LINKS");
+
+if(a==true){
+  window.location.href = "https://t.me/cricmatchstream";
+}
+
+      
+      
+
+
+      function welcome(){
+ window.open("https://t.me/cricmatchstream")
       }
+    </script>
+
+<!-- <div id="tele">
+  <img src="telegram.svg" />
+  <ul>
+      <li><a class="item" href="https://t.me/cricmatchstream">JOIN TELEGRAM</a></li>
+   </ul>
+  </div> -->
+  <div id="ok">
+  <button  id="tele"onclick="welcome()">
+    <img src="telegram.svg" />
+    CLICK HERE TO JOIN TELEGRAM 
+    </button>
     </script>
   </body>
 </html>
